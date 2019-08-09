@@ -1,7 +1,6 @@
 # Proquest-News-Analysis
 
-This project uses Python to turn ProQuest newspaper archive search results (in HTML format) into csv files (see html_parsing) and R to preprocess (remove HTML tags, etc.,) these CSV fiels (see csv_preprocessing).
-
+This project uses Python to turn search results (in HTML format) from ProQuest newspaper archive into csv files (see html_parsing) and R to preprocess (remove HTML tags, etc.,) these CSV fiels (see csv_preprocessing).
 
 
 ## Updates
