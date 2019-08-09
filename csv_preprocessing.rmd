@@ -1,0 +1,79 @@
+---
+title: "Preprocessing a CSV file"
+author: "Jae Yeon Kim"
+output: html_notebook
+---
+
+# Setup
+
+```{r, echo=FALSE}
+
+# load libraries
+pacman::p_load(
+  tidyverse, # tidyverse
+  textclean, # clean text package
+  stringr # string manipulation
+)
+
+```
+
+# Load files 
+
+
+```{r}
+
+articles <- read_csv("/home/jae/muslim_newspapers-selected/full_version.csv")[,-1] # skip the first column
+
+```
+
+# Preprocessing 
+
+## Remove HTML tags in text
+
+```{r}
+articles$text <- articles$text %>%
+  replace_html() 
+
+articles$text <- gsub("[\r\n]", "", articles$text)
+
+```
+
+## Remove HTML tags + Separate columns in date (source, date)
+
+This step is necessary since the current date column includes publication date as well as other information related to an article. 
+```{r}
+
+# This time, we only use the source and the publicaiton date of the articles. For this reason, I cut the other information out. 
+
+articles$date <- 
+gsub(".*\n</span><span class=\"titleAuthorETC\"><strong>", "", articles$date)
+
+articles$date <- 
+gsub(":.*", "", articles$date)
+
+articles$date <- 
+gsub("</strong>.*</strong>", "", articles$date)
+
+articles$date <- articles$date %>% replace_html()
+
+articles$date <- gsub("\\]", ":", articles$date)
+
+# Then, split the date column into two new columns.  
+
+articles <- articles %>%
+  separate(date, c("source", "date"), ":")
+
+# Further clean up.
+
+articles$source <- gsub("\\[.*", "", articles$source) %>%
+  trimws()
+```
+
+# Save as a new CSV file
+
+```{r}
+
+write_csv(articles, "/home/jae/muslim_newspapers-selected/preprocessed_articles.csv")
+
+```
+
