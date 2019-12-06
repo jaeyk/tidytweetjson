@@ -5,6 +5,6 @@ This project uses Python to turn search results (in HTML format) from ProQuest n
 
 ## Updates
 
-- Proquest no longer allows users to download search results in HTML format. One way you can get around the problem is to print seasrch results and save them as HTML files. I updated my Python script according to this new method.
+- Proquest no longer allows users to download search results in HTML format. One way you can get around this problem is to print search results and save them as HTML files. I updated my Python script according to this new method.
 
 - Cody Hennesy developed a test version of [factiva_parser](https://github.com/chennesy/factiva_parser). That might be useful to some of you working on Factiva data. 
