@@ -1,7 +1,10 @@
-# Proquest-News-Analysis
+# proquest_parser
 
-This project uses Python to turn search results (in HTML format) from ProQuest newspaper archive into CSV files (see html_parsing) and R to preprocess (remove HTML tags, etc.,) these CSV fiels (see csv_preprocessing).
+This project uses Python to turn search results (in HTML format) from ProQuest newspaper archive into CSV files (see html_parsing). It also shows how to use R to preprocess (remove HTML tags, etc.,) these CSV fiels (see csv_preprocessing).
 
 
 ## Updates
-Proquest no longer allows users to save search results in HTML format. I updated my Python script to deal with this problem.
+
+- Proquest no longer allows users to download search results in HTML format. One way you can get around the problem is to print seasrch results and save them as HTML files. I updated my Python script according to this new method.
+
+- Cody Hennesy developed a test version of [factiva_parser](https://github.com/chennesy/factiva_parser). That might be useful to some of you working on Factiva data. 
