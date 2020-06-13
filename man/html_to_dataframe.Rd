@@ -2,16 +2,16 @@
 % Please edit documentation in R/html_to_dataframe.R
 \name{html_to_dataframe}
 \alias{html_to_dataframe}
-\title{Parse a ProQuest's archive search result (saved in HTML format) into a dataframe}
+\title{Parse an Ethnic NewsWatch search result (saved in HTML format) into a dataframe}
 \usage{
 html_to_dataframe(html_file)
 }
 \arguments{
-\item{html_file}{An HTML file that contains the search results from the ProQuest's news archive}
+\item{html_file}{An HTML file that contains the search results from the Ethnic NewsWatch database. This input should be a string vector.}
 }
 \value{
 A dataframe with four columns ("text", "source", "author", "date")
 }
 \description{
-Parse a ProQuest's archive search result (saved in HTML format) into a dataframe
+Parse an Ethnic NewsWatch search result (saved in HTML format) into a dataframe
 }

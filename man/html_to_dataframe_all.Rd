@@ -2,16 +2,16 @@
 % Please edit documentation in R/html_to_dataframe_all.R
 \name{html_to_dataframe_all}
 \alias{html_to_dataframe_all}
-\title{Parse multiple ProQuest's archive search result (saved in HTML format) into a dataframe simultaneously}
+\title{Parse multiple Ethnic NewsWatch search result (saved in HTML format) into a dataframe}
 \usage{
 html_to_dataframe_all(filepath)
 }
 \arguments{
-\item{filepath}{A file path where a user saved HTML files containing the search results from the ProQuest's news archive. This input should be a string vector.}
+\item{filepath}{A file path where a user saved HTML files containing the search results from the Ethnic NewsWatch database. This input should be a string vector.}
 }
 \value{
 A dataframe with four columns ("text", "source", "author", "date")
 }
 \description{
-Parse multiple ProQuest's archive search result (saved in HTML format) into a dataframe simultaneously
+Parse multiple Ethnic NewsWatch search result (saved in HTML format) into a dataframe
 }
