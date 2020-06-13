@@ -1,14 +1,14 @@
 #' Parse an Ethnic NewsWatch search result (saved in HTML format) into a dataframe 
 #'
-#' @param html_file An HTML file that contains the search results from the Ethnic NewsWatch database. This input should be a string vector. 
+#' @param file_path A file path which indicates an HTML file that contains the search results from the Ethnic NewsWatch database. This input should be a string vector. 
 #' @return A dataframe with four columns ("text", "source", "author", "date")
 #'
 #' @export
 
-html_to_dataframe <- function(html_file){
+html_to_dataframe <- function(file_path){
   
 # Import data 
-html_data <- xml2::read_html(html_file) 
+html_data <- xml2::read_html(filepath) 
 
 # Select text 
 doc_text <- html_data %>% 

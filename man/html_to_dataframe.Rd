@@ -4,10 +4,10 @@
 \alias{html_to_dataframe}
 \title{Parse an Ethnic NewsWatch search result (saved in HTML format) into a dataframe}
 \usage{
-html_to_dataframe(html_file)
+html_to_dataframe(file_path)
 }
 \arguments{
-\item{html_file}{An HTML file that contains the search results from the Ethnic NewsWatch database. This input should be a string vector.}
+\item{file_path}{A file path which indicates an HTML file that contains the search results from the Ethnic NewsWatch database. This input should be a string vector.}
 }
 \value{
 A dataframe with four columns ("text", "source", "author", "date")
