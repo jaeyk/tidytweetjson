@@ -1,6 +1,12 @@
 # tidyethnicnews
 
-[Ethnic NewsWatch database](https://about.proquest.com/products-services/ethnic_newswatch.html), provided by ProQuest, has complied more than 2.5 million articles published in the US ethnic newspapers and magazines. This rich information helps researchers to investigate the growing and varying political voice of minority groups in the US. This R package provides functions to turn unstructured Ethnic NewsWatch search results into tidyverse-ready dataframes.
+An R Package for Turning Ethnic NewsWatch Search Results into Tidyverse-ready Dataframes
+
+Author: [Jae Yeon Kim](https://jaeyk.github.io/)
+
+## Summary
+
+[Ethnic NewsWatch database](https://about.proquest.com/products-services/ethnic_newswatch.html), provided by ProQuest, has complied more than 2.5 million articles published in the US ethnic newspapers and magazines. This rich information helps researchers to investigate the growing and varying political voice of minority groups in the US. This R package provides functions to turn Ethnic NewsWatch search results into tidyverse-ready dataframes.
 
 
 ## Installation
@@ -36,7 +42,7 @@ filepath <- file.choose()
 df <- html_to_dataframe(filepath)
 ```
 
-The `df` object should have four columns: `text`, `author`, `source`, `date`. I measured the running time of parsing one HTML file, which contains 100 newspaper articles, using `tictoc` library.
+The `df` object should have four columns: `text`, `author`, `source`, `date`. 
 
 ### 2. Turn all HTML files saved in a directory in a dataframe
 
@@ -53,8 +59,10 @@ df_all <- html_to_dataframe_all(dirpath)
 
 ```
 
-Again, the `df_all` object should have four columns: `text`, `author`, `source`, `date`. I tested the running time performance using `tictoc` library. `html_to_dataframe_all()` function took **66.454** seconds, about **one** minute, to turn **5,684** articles into a dataframe. (On average, **0.01** seconds per article.)
+Again, the `df_all` object should have four columns: `text`, `author`, `source`, `date`. I tested the running time performance using [`tictoc`](https://cran.r-project.org/web/packages/tictoc/index.html) package. `html_to_dataframe_all()` function took **66.454** seconds, about **one** minute, to turn **5,684** articles into a dataframe. (On average, **0.01** seconds per article.)
 
 ### 3. Data quality check
 
-## TO DO
+## Applications
+
+If you have published a paper/project using `tidyethnicnews` package, please email me.

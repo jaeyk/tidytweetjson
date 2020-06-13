@@ -39,7 +39,12 @@ df$date <- str_replace_all(df$date, "\n\n\n", "") %>% str_trim()
 df$source_mixed <- df$source_mixed %>%
   str_replace_all(";.*", "") 
 
-# Separate author and source 
+# Separate author and source
+
+## Suppress warnings from separate because I will send out my own messages instead. (This approach is more informative.)
+
+suppressWarnings(warning("separate"))
+
 df <- df %>% separate(source_mixed, c("author", "source"), ".\n")
 
 if(sum(is.na(df$source)) >= 1){print("NAs were found in source column. The problem will be fixed automatically.")}

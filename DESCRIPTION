@@ -15,5 +15,7 @@ Imports:
   stringr (>= 1.4.0),
   purrr (>= 0.3.4),
   xml2 (>= 1.3.2),
-  textclean
+  textclean 
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr
 RoxygenNote: 7.1.0
