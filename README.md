@@ -55,6 +55,6 @@ df_all <- html_to_dataframe_all(dirpath)
 
 Again, the `df_all` object should have four columns: `text`, `author`, `source`, `date`. I tested the running time performance using `tictoc` library. `html_to_dataframe_all()` function took **66.454** seconds, about **one** minute, to turn **5,684** articles into a dataframe. (On average, **0.01** seconds per article.)
 
-### Data quality check
+### 3. Data quality check
 
 ## TO DO
