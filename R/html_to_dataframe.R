@@ -1,6 +1,6 @@
 #' Parse an Ethnic NewsWatch search result (saved in HTML format) into a dataframe 
 #'
-#' @param html_file An HTML file that contains the search results from the ProQuest's news archive 
+#' @param html_file An HTML file that contains the search results from the Ethnic NewsWatch database. This input should be a string vector. 
 #' @return A dataframe with four columns ("text", "source", "author", "date")
 #'
 #' @export
