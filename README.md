@@ -16,11 +16,13 @@ devtools::install_github("jaeyk/tidyethnicnews",
 ## Responsible use
 `tidyethnicnews` should be used in strict accordance with EthnicNewsWatch's [Terms of Use](https://about.proquest.com/about/terms-and-conditions.html).
 
-### How to download HTML search results
+### How to download HTML search results from Ethnic NewsWatch
 
 - This method still works as of Jun 13, 2020. However, please note that ProQuest download policy can change anytime.
 
 ## Usage
+
+### Turn an HTML file in a dataframe
 
 ```r
 
@@ -35,6 +37,8 @@ df <- html_to_dataframe(filepath)
 ```
 
 The `df` object should have four columns: `text`, `author`, `source`, `date`. I measured the running time of parsing one HTML file, which contains 100 newspaper articles, using `tictoc` library.
+
+### Turn all HTML files saved in a directory in a dataframe
 
 ```r
 
