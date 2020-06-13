@@ -2,6 +2,7 @@
 
 export(html_to_dataframe)
 export(html_to_dataframe_all)
+importFrom(magrittr,"%>%")
 importFrom(purrr,pmap)
 importFrom(purrr,reduce)
 importFrom(rvest,html_nodes)
