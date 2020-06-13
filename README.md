@@ -22,7 +22,7 @@ devtools::install_github("jaeyk/tidyethnicnews",
 
 ## Usage
 
-### Turn an HTML file in a dataframe
+### 1. Turn an HTML file in a dataframe
 
 ```r
 
@@ -38,7 +38,7 @@ df <- html_to_dataframe(filepath)
 
 The `df` object should have four columns: `text`, `author`, `source`, `date`. I measured the running time of parsing one HTML file, which contains 100 newspaper articles, using `tictoc` library.
 
-### Turn all HTML files saved in a directory in a dataframe
+### 2. Turn all HTML files saved in a directory in a dataframe
 
 ```r
 
@@ -54,5 +54,7 @@ df_all <- html_to_dataframe_all(dirpath)
 ```
 
 Again, the `df_all` object should have four columns: `text`, `author`, `source`, `date`. I tested the running time performance using `tictoc` library. `html_to_dataframe_all()` function took **66.454** seconds, about **one** minute, to turn **5,684** articles into a dataframe. (On average, **0.01** seconds per article.)
+
+### Data quality check
 
 ## TO DO
