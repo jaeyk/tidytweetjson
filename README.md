@@ -28,7 +28,7 @@ devtools::install_github("jaeyk/tidyethnicnews",
 
 ## Usage
 
-### 1. `html_to_dateframe()`: Turn an HTML file in a dataframe
+### 1. `html_to_dateframe()`: Turn an HTML file into a dataframe
 
 ```r
 
@@ -44,7 +44,7 @@ df <- html_to_dataframe(filepath)
 
 The `df` object should have four columns: `text`, `author`, `source`, `date`. According to the performance test done by `microbenchmark` package, `html_to_dataframe()` function takes average **0.0007** seconds to turn **100** newspaper articles into a tidy dataframe.
 
-### 2. `html_to_dataframe_all()`: Turn all HTML files saved in a directory in a dataframe
+### 2. `html_to_dataframe_all()`: Turn all HTML files, saved in a directory, into a dataframe
 
 ```r
 
