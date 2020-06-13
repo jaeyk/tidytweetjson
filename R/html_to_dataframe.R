@@ -30,12 +30,12 @@ df <- data.frame(text = doc_text,
 # Separate mixed 
 df <- df %>% separate(mixed, c("source_mixed", "date"), ":")
 
-# Final clean up
+# Clean up
 
 ## Date
 df$date <- str_replace_all(df$date, "\n\n\n", "") %>% str_trim()
 
-# Final clean up
+## Mixed
 df$source_mixed <- df$source_mixed %>%
   str_replace_all(";.*", "") 
 
