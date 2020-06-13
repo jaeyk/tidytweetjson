@@ -9,7 +9,8 @@
 
 ## Install the current development version from GitHub
 
-devtools::install_github("jaeyk/tidyethnicnews")
+devtools::install_github("jaeyk/tidyethnicnews",
+                         dependencies = TRUE)
 ```
 
 ## Responsible use
@@ -17,5 +18,34 @@ devtools::install_github("jaeyk/tidyethnicnews")
 
 
 ## Usage
+
+```r
+
+# Load library
+library(tidyethnicnews)
+
+# You need to choose an HTML search result
+file <- file.choose()
+
+# Assign the parsed result to the `df` object
+df <- html_to_dataframe(file)
+```
+
+The `df` object should have four columns: `text`, `author`, `source`, `date`. I measured the running time of parsing one HTML file, which contains 100 newspaper articles, using `tictoc` library. The test result shows that `html_to_dataframe()` function took **0.699** seconds to turn 100 newspaper articles into a dataframe. (On average, **0.006** second per article.)
+
+```r
+
+# Load library
+library(tidyethnicnews)
+
+# You need to designate a file path (directory).
+filepath <- tcltk::tk_choose.dir()
+
+# Assign the parsed result to the `df_all` object
+df_all <- html_to_dataframe_all(filepath)
+
+```
+
+Again, the `df_all` object should have four columns: `text`, `author`, `source`, `date`. As in the above, I tested the running time performance using `tictoc` library. `html_to_dataframe_all()` function took 66.454 seconds, about one minute, to turn 5,684 articles into a dataframe. (On average, **0.01** second per article.)
 
 TO DO
