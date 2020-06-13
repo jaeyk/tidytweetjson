@@ -8,7 +8,7 @@
 html_to_dataframe <- function(file_path){
   
 # Import data 
-html_data <- xml2::read_html(filepath) 
+html_data <- xml2::read_html(file_path) 
 
 # Select text 
 doc_text <- html_data %>% 
