@@ -1,4 +1,4 @@
-#' Parse a ProQuest's archive search result (saved in HTML format) into a dataframe 
+#' Parse an Ethnic NewsWatch search result (saved in HTML format) into a dataframe 
 #'
 #' @param html_file An HTML file that contains the search results from the ProQuest's news archive 
 #' @return A dataframe with four columns ("text", "source", "author", "date")

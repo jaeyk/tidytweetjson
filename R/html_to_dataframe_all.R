@@ -1,4 +1,4 @@
-#' Parse multiple ProQuest's archive search result (saved in HTML format) into a dataframe simultaneously
+#' Parse multiple Ethnic NewsWatch search result (saved in HTML format) into a dataframe
 #'
 #' @param filepath A file path where a user saved HTML files containing the search results from the ProQuest's news archive. This input should be a string vector. 
 #' @return A dataframe with four columns ("text", "source", "author", "date")
