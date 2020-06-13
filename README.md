@@ -65,7 +65,7 @@ Again, the `df_all` object should have four columns: `text`, `author`, `source`,
 
 If you have published a paper/project using tidyethnicnews package, please email me.
 
-This package has been useful for me to collect data for my dissertation and othe research. 
+This package has been useful for me to collect data for my dissertation and other research. 
 
 1. Kim, Jae Yeon. 2020. "Text as Issue: Measuring Issues Preferences Among Minority Groups Through Ethnic Newspapers." SocArXiv. April 30.  [[Preprint](https://osf.io/preprints/socarxiv/pg3aq/)] [[GitHub](https://github.com/jaeyk/content-analysis-for-evaluating-ML-performances)] [[Slides (presented at the UC Berkeley D-Lab Fellows Talk Series)](https://slides.com/jaeyeonkim/deck/fullscreen)]
 
