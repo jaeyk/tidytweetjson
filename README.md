@@ -18,7 +18,7 @@ devtools::install_github("jaeyk/tidyethnicnews",
 
 ## How to download HTML search results
 
-- This method still works as of Jun 13, 2020. However, ProQuest download policy can change policy anytime.
+- This method still works as of Jun 13, 2020. However, please note that ProQuest download policy can change anytime.
 
 ## Usage
 
