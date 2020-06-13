@@ -28,7 +28,7 @@ devtools::install_github("jaeyk/tidyethnicnews",
 
 ## Usage
 
-### 1. Turn an HTML file in a dataframe
+### 1. `html_to_dateframe()`: Turn an HTML file in a dataframe
 
 ```r
 
@@ -42,9 +42,9 @@ filepath <- file.choose()
 df <- html_to_dataframe(filepath)
 ```
 
-The `df` object should have four columns: `text`, `author`, `source`, `date`. According to the performance test done by `microbenchmark` package, `html_to_dataframe()` function takes average 0.0007 seconds to turn 100 newspaper articles into a tidy dataframe.
+The `df` object should have four columns: `text`, `author`, `source`, `date`. According to the performance test done by [`microbenchmark`](https://cran.r-project.org/web/packages/microbenchmark/microbenchmark.pdf) package, `html_to_dataframe()` function takes average 0.0007 seconds to turn 100 newspaper articles into a tidy dataframe.
 
-### 2. Turn all HTML files saved in a directory in a dataframe
+### 2. `html_to_dataframe_all()`: Turn all HTML files saved in a directory in a dataframe
 
 ```r
 
@@ -60,8 +60,6 @@ df_all <- html_to_dataframe_all(dirpath)
 ```
 
 Again, the `df_all` object should have four columns: `text`, `author`, `source`, `date`. I tested the running time performance using [`tictoc`](https://cran.r-project.org/web/packages/tictoc/index.html) package. `html_to_dataframe_all()` function takes **45.948** seconds, less than **one** minute, to turn **5,684** articles into a dataframe. (On average, **0.008** seconds per article.)
-
-### 3. Data quality check
 
 ## Applications
 
