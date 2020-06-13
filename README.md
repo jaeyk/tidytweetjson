@@ -18,7 +18,7 @@ devtools::install_github("jaeyk/tidyethnicnews",
 
 ### How to download HTML search results from Ethnic NewsWatch
 
-- This method still works as of Jun 13, 2020. However, please note that ProQuest download policy can change anytime.
+- This method still works as of June 13, 2020. However, please note that ProQuest download policy can change anytime.
 
 ## Usage
 
