@@ -2,6 +2,9 @@
 #'
 #' @param dir_path A directory path where a user saved the HTML files containing the search results from the Ethnic NewsWatch database. This input should be a string vector. 
 #' @return A dataframe with four columns ("text", "source", "author", "date")
+#' @importFrom dplyr full_join
+#' @importFrom purrr pmap
+#' @importFrom purrr reduce
 #' @export
 
 html_to_dataframe_all <- function(dir_path){
