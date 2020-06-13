@@ -9,6 +9,7 @@
 #' @importFrom purrr pmap
 #' @importFrom purrr reduce
 #' @importFrom rvest html_nodes
+#' @importFrom rvest html_text
 #' @importFrom textclean replace_html
 #' @export
 
