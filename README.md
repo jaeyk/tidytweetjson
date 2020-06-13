@@ -6,7 +6,7 @@ Author: [Jae Yeon Kim](https://jaeyk.github.io/)
 
 ## Summary
 
-[Ethnic NewsWatch database](https://about.proquest.com/products-services/ethnic_newswatch.html), provided by ProQuest, has complied more than 2.5 million articles published in the US ethnic newspapers and magazines. This data source helps researchers to investigate the political voice of minority groups in the US with rich and extensive text data. This R package provides functions to turn Ethnic NewsWatch search results into tidyverse-ready dataframes.
+[Ethnic NewsWatch database](https://about.proquest.com/products-services/ethnic_newswatch.html), provided by [ProQuest](https://about.proquest.com/), has complied more than 2.5 million articles published in the US ethnic newspapers and magazines. This data source helps researchers to investigate the political voice of minority groups in the US with rich and extensive text data. This R package provides functions to turn Ethnic NewsWatch search results into tidyverse-ready dataframes.
 
 
 ## Installation
