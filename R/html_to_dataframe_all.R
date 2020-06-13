@@ -9,7 +9,9 @@
 html_to_dataframe_all <- function(dir_path){
   
 # Load all HTML files in the designated file path 
-filename <- list.files(path = dir_path, pattern = '*.html', full.names = TRUE)
+filename <- list.files(dir_path, 
+                       pattern = '*.html', 
+                       full.names = TRUE)
 
 df <- list(filename) %>%
   # Apply html_to_dataframe function to items on the list 
