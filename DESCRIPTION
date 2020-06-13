@@ -1,6 +1,6 @@
-Package: parseethnicnewswatch
+Package: tidyethnicnews
 Type: Package
-Title: Parsing Ethnic NewsWatch search results into a dataframe
+Title: Tidying Ethnic NewsWatch search results into a dataframe
 Version: 0.1.0
 Authors@R: person("Jae Yeon", "Kim", email = "jaeyeonkim@berkeley.edu", role = "cre")
 Maintainer: Jae Yeon Kim <jaeyeonkim@berkeley.edu>
