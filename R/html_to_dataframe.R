@@ -3,6 +3,8 @@
 #' @param file_path A file path which indicates an HTML file that contains the search results from the Ethnic NewsWatch database. This input should be a string vector.
 #' 
 #' @return A dataframe with four columns ("text", "source", "author", "date")
+#' @importFrom tidyr separate
+#' @importFrom magrittr "%>%"
 #' @importFrom stringr str_replace_all
 #' @importFrom stringr str_trim
 #' @importFrom xml2 read_html
