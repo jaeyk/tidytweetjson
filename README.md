@@ -42,7 +42,7 @@ filepath <- file.choose()
 df <- html_to_dataframe(filepath)
 ```
 
-The `df` object should have four columns: `text`, `author`, `source`, `date`. 
+The `df` object should have four columns: `text`, `author`, `source`, `date`.
 
 ### 2. Turn all HTML files saved in a directory in a dataframe
 
