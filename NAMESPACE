@@ -2,3 +2,10 @@
 
 export(html_to_dataframe)
 export(html_to_dataframe_all)
+importFrom(purrr,pmap)
+importFrom(purrr,reduce)
+importFrom(rvest,html_nodes)
+importFrom(stringr,str_replace_all)
+importFrom(stringr,str_trim)
+importFrom(textclean,replace_html)
+importFrom(xml2,read_html)
