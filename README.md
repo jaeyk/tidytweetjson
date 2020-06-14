@@ -6,7 +6,17 @@ Author: [Jae Yeon Kim](https://jaeyk.github.io/)
 
 ## Summary
 
-The [Ethnic NewsWatch database](https://about.proquest.com/products-services/ethnic_newswatch.html), provided by [ProQuest](https://about.proquest.com/), has compiled more than 2.5 million articles published in US ethnic newspapers and magazines. This data source helps researchers investigate the political voice of minority groups in the US with rich and extensive text data. `tidyethnicnews` provides functions to turn Ethnic NewsWatch search results into tidyverse-ready dataframes.
+The [Ethnic NewsWatch database](https://about.proquest.com/products-services/ethnic_newswatch.html), provided by [ProQuest](https://about.proquest.com/), has compiled more than 2.5 million articles published in US ethnic newspapers and magazines. The database covers the following groups:
+
+- African American/Caribbean/African
+- Arab/Middle Eastern
+- Asian/Pacific Islander
+- European/Eastern European
+- Latinx
+- Jewish
+- Native Americans
+
+This data source helps researchers investigate the political voice of minority groups in the US with rich and extensive text data. `tidyethnicnews` provides functions to turn Ethnic NewsWatch search results into tidyverse-ready dataframes.
 
 ## Installation
 
