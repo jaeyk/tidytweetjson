@@ -77,7 +77,7 @@ As stated in the message, the problem will be fixed automatically and there's no
 
 The next step is scale-up. `html_to_dataframe_all()` function allows you to turn all HTML files, saved in a directory, into a d dataframe using a single command. My very first attempt was writing a for loop function and the computationa was slow. I fixed this problem by using `purrr` package. Combining `pmap()` and `reduce()` functions improves the performance significantly.
 
-Again, the `df_all` object should have four columns: `text`, `author`, `source`, `date`. I tested the running time performance using `tictoc` package. `html_to_dataframe_all()` function takes **45.948** seconds, less than **one** minute, to turn **5,684** articles into a dataframe. (On average, **0.008** seconds per article.)
+Again, the `df_all` object should have four columns: `text`, `author`, `source`, `date`. I tested the running time performance using `tictoc` package. `html_to_dataframe_all()` function takes **26.369** seconds, less than **one** minute, to turn **5,684** articles into a dataframe. (On average, **0.008** seconds per article.)
 
 ```r
 

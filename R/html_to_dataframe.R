@@ -24,7 +24,8 @@ html_data <- read_html(file_path)
 doc_text <- html_data %>% 
     html_nodes("text") %>% 
     replace_html() %>%
-    str_replace_all("[\r\n]", "")
+    str_replace_all("[\r\n]", "") %>%
+    str_replace_all("[\"]", "")
 
 # Select mixed (source + date)
 doc_mixed <- html_data %>% 
