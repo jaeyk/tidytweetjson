@@ -81,7 +81,7 @@ If an article is missing an `author` field, a value in the `source` field is mov
 
 > "NAs were found in source column. The problem will be fixed automatically."`
 
-As stated in the message, the problem will be fixed automatically and there's nothing you need to worry about. If you are not assured, then please take a look at the source code, especially lines 62–71.
+As stated in the message, the problem will be fixed automatically and there's nothing you need to worry about. If you are not assured, then please take a look at the source code.
 
 ### 2. `html_to_dataframe_all()`: Turn all HTML files, saved in a directory, into a dataframe
 
