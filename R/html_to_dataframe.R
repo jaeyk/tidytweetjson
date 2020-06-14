@@ -17,7 +17,7 @@
 #' @export
 
 html_to_dataframe <- function(file_path){
-  
+
 # Import data 
 html_data <- read_html(file_path) 
 
@@ -58,10 +58,12 @@ df$source_mixed <- df$source_mixed %>%
 
 # Separate author and source
 
+suppressWarnings(suppressMessages(
 df <- df %>% 
-    separate(source_mixed, 
-             into = c("author", "source"), 
-             sep = ".\n")
+      separate(source_mixed, 
+           into = c("author", "source"), 
+           sep = ".\n")
+)) # I will suppress warnings from the separate function and use my own messages instead. 
 
 if(sum(is.na(df$source)) >= 1){
     message("NAs were found in source column. The problem will be fixed automatically.")
