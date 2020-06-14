@@ -77,7 +77,7 @@ if(sum(is.na(df$source)) >= 1){
 
     df$author <- ifelse(df$author %in% unique(df$source), NA, df$author)
 
-    message("Problem fixed.")
+    message("The problem fixed.")
 
 } else {
 
