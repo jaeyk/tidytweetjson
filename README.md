@@ -72,3 +72,44 @@ df <- html_to_dataframe(filepath)
 ```
 
 The `df` object should have four columns: `text`, `author`, `source`, `date`. According to the performance test done by the `microb
+
+The `df` object should have four columns: `text`, `author`, `source`, `date`. According to the performance test done by the `microbenchmark` package, the `html_to_dataframe()` function takes average **0.0004** seconds to turn **100** newspaper articles into a tidy dataframe.
+
+This function helps you clean and wrangle your text data without needing to know anything about parsing HTML and manipulating string patterns (regular expressions).
+
+**Notes on the Error Messages**
+
+If an article is missing an `author` field, a value in the `source` field is moved to the `author` field and `NA` is recorded in the `source` field during the wrangling process. When this issue occurs, you will receive an error message saying:
+
+> "NAs were found in source column. The problem will be fixed automatically."`
+
+As stated in the message, the problem will be fixed automatically and there's nothing you need to worry about. If you are not assured, then please take a look at the source code, especially lines 62–71.
+
+### 2. `html_to_dataframe_all()`: Turn all HTML files, saved in a directory, into a dataframe
+
+The next step is scale-up. The `html_to_dataframe_all()` function allows you to turn all the HTML files saved in a particular directory into a d dataframe using a single command. My very first attempt was writing a for-loop function, and the computation was slow. I fixed this problem by using the `purrr` package. Combining the `pmap()` and `reduce()` functions improves the performance significantly.
+
+Again, the `df_all` object should have four columns: `text`, `author`, `source`, `date`. I tested the running time performance using the `tictoc` package. The `html_to_dataframe_all()` function takes **26.777** seconds, less than **45** seconds, to turn **5,684** articles into a dataframe. (On average, **0.005** seconds per article.)
+
+```r
+
+# Load library
+library(tidyethnicnews)
+
+# You need to designate a directory path.
+dirpath <- tcltk::tk_choose.dir()
+
+# Assign the parsed result to the `df_all` object
+df_all <- html_to_dataframe_all(dirpath)
+
+```
+
+## Applications
+
+This package has been useful for me to collect data for [my dissertation](https://jaeyk.github.io/_pages/dissertation_abstract_Kim.pdf) and other research.
+
+1. Kim, Jae Yeon. 2020. "Text as Issue: Measuring Issues Preferences Among Minority Groups Through Ethnic Newspapers." SocArXiv. April 30.  [[Preprint](https://osf.io/preprints/socarxiv/pg3aq/)] [[GitHub](https://github.com/jaeyk/content-analysis-for-evaluating-ML-performances)] [[Slides (presented at the UC Berkeley D-Lab Fellows Talk Series)](https://slides.com/jaeyeonkim/deck/fullscreen)]
+
+   - Winner of the [Don T. Nakanishi Award for Distinguished Scholarship in Asian Pacific American Politics](https://www.wpsanet.org/award/2020Awards.pdf),  Western Political Science Association (2020)
+
+2. “How Do Threats Induce Information Seeking?: When Natural Experiments Meet Text Data” (with [Andrew Thompson](https://sites.northwestern.edu/athompson/)) [[GitHub](https://github.com/jaeyk/ITS-Text-Classification)]
