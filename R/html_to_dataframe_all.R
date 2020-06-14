@@ -15,10 +15,11 @@ filename <- list.files(dir_path,
                        full.names = TRUE)
 
 df <- list(filename) %>%
-  # Apply html_to_dataframe function to items on the list 
-  pmap(~html_to_dataframe(.)) %>%
-  # Full join the list of dataframes 
-  reduce(full_join, by = c("text", "source", "author","date"))
+    
+    # Apply html_to_dataframe function to items on the list 
+    pmap(~html_to_dataframe(.)) %>%
+    # Full join the list of dataframes 
+    reduce(full_join, by = c("text", "source", "author","date"))
 
 # Output
 df 
