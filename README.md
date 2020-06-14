@@ -71,7 +71,7 @@ filepath <- file.choose()
 df <- html_to_dataframe(filepath)
 ```
 
-The `df` object should have four columns: `text`, `author`, `source`, `date`. According to the performance test done by the `microbenchmark` package, the `html_to_dataframe()` function takes average **0.0004** seconds to turn **100** newspaper articles into a tidy dataframe.
+The `df` object should have four columns: `text`, `author`, `source`, `date`. According to the performance test done by the `microbenchmark` package, the `html_to_dataframe()` function takes average **0.0005** seconds to turn **100** newspaper articles into a tidy dataframe.
 
 This function helps you clean and wrangle your text data without needing to know anything about parsing HTML and manipulating string patterns (regular expressions).
 
