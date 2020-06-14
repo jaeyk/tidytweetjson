@@ -58,8 +58,10 @@ df$source_mixed <- df$source_mixed %>%
 ## Suppress warnings and messages from separate because I will send out my own messages instead. (This approach is more informative.)
 
 suppressWarnings(warning("separate"))
+suppressWarnings(warning("data.table"))
 
 suppressMessages(message("separate"))
+suppressMessages(message("data.table"))
 
 df <- df %>% 
     separate(source_mixed, c("author", "source"), ".\n")
