@@ -33,7 +33,7 @@ devtools::install_github("jaeyk/tidyethnicnews",
 
 5. Click the `...` action button and save the search result using the `PRINT` option. There are multiple file formats for saving the search result, but `HTML` is the most flexible for extracting various attributes. The printed search result should look like the sample screenshot in Figure 1.
 
-<img src="https://github.com/jaeyk/ITS-Text-Classification/blob/master/misc/screenshot.png" width="600">
+<img src="https://github.com/jaeyk/ITS-Text-Classification/blob/master/misc/screenshot.png" width="800">
 
 Figure 1. Sample screenshot.
 
