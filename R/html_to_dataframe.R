@@ -55,10 +55,10 @@ df$source_mixed <- df$source_mixed %>%
 
 # Separate author and source
 
-## Suppress warnings and messages from separate because I will send out my own messages instead. (This approach is more informative.)
-
 df <- df %>% 
-    separate(source_mixed, c("author", "source"), ".\n")
+    separate(source_mixed, 
+             into = c("author", "source"), 
+             sep = ".\n")
 
 if(sum(is.na(df$source)) >= 1){
     message("NAs were found in source column. The problem will be fixed automatically.")
