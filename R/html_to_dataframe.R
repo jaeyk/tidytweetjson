@@ -6,6 +6,7 @@
 #' @importFrom tidyr separate
 #' @importFrom magrittr "%>%"
 #' @importFrom stringr str_replace_all
+#' @importFrom stringr str_squish
 #' @importFrom stringr str_trim
 #' @importFrom xml2 read_html
 #' @importFrom purrr pmap
@@ -25,7 +26,8 @@ doc_text <- html_data %>%
     html_nodes("text") %>% 
     replace_html() %>%
     str_replace_all("[\r\n]", "") %>%
-    str_replace_all("\\", "")
+    str_replace_all("\"", "") %>% # Quotation marks 
+    str_squish() # Excessive whitespace
 
 # Select mixed (source + date)
 doc_mixed <- html_data %>% 
