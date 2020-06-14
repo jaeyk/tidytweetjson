@@ -5,17 +5,17 @@ Version: 0.1.0
 Author: person("Jae Yeon", "Kim", email = "jaeyeonkim@berkeley.edu", role = "cre")
 Maintainer: Jae Yeon Kim <jaeyeonkim@berkeley.edu>
 BugReports: https://github.com/jaeyk/tidyethnicnews
-Description: Ethnic NewsWatch database, provided by ProQuest, has complied more than 2.5 million articles published in the US ethnic newspapers and magazines. This data source helps researchers to investigate the political voice of minority groups in the US with rich and extensive text data. These functions turn unstructured Ethnic NewsWatch search results into tidyverse-ready dataframes.
+Description: The Ethnic NewsWatch database, provided by ProQuest, has compiled more than 2.5 million articles published in US ethnic newspapers and magazines. This data source helps researchers investigate the political voice of minority groups in the US with rich and extensive text data. These functions turn unstructured Ethnic NewsWatch search results into tidyverse-ready dataframes.
 Depends: R (>= 3.6)
 License: MIT + file LICENSE
 Encoding: UTF-8
 Imports:
-  magrittr (>= 1.5), 
+  magrittr (>= 1.5),
   dplyr (>= 0.9.0),
-  tidyr (>= 1.1.0), 
+  tidyr (>= 1.1.0),
   rvest (>= 0.3.0),
   stringr (>= 1.4.0),
   purrr (>= 0.3.4),
   xml2 (>= 1.3.2),
-  textclean 
+  textclean
 RoxygenNote: 7.1.0
