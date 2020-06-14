@@ -1,4 +1,4 @@
-# tidyethnicnews Version: 0.1.0
+# tidyethnicnews 
 
 An R Package for Turning Ethnic NewsWatch Search Results into Tidyverse-ready Dataframes
 
