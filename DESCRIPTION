@@ -2,7 +2,7 @@ Package: tidyethnicnews
 Type: Package
 Title: Tidying Ethnic NewsWatch Search Results
 Version: 0.1.0
-Author: person("Jae Yeon", "Kim", email = "jaeyeonkim@berkeley.edu", role = "cre")
+Authors@R: person("Jae Yeon", "Kim", email = "jaeyeonkim@berkeley.edu", role = "cre")
 Maintainer: Jae Yeon Kim <jaeyeonkim@berkeley.edu>
 BugReports: https://github.com/jaeyk/tidyethnicnews
 Description: The Ethnic NewsWatch database, provided by ProQuest, has compiled more than 2.5 million articles published in US ethnic newspapers and magazines. This data source helps researchers investigate the political voice of minority groups in the US with rich and extensive text data. These functions turn unstructured Ethnic NewsWatch search results into tidyverse-ready dataframes.
