@@ -111,3 +111,12 @@ This package has been useful for me to collect data for [my dissertation](https:
    - Winner of the [Don T. Nakanishi Award for Distinguished Scholarship in Asian Pacific American Politics](https://www.wpsanet.org/award/2020Awards.pdf),  Western Political Science Association (2020)
 
 2. “How Do Threats Induce Information Seeking?: When Natural Experiments Meet Text Data” (with [Andrew Thompson](https://sites.northwestern.edu/athompson/)) [[GitHub](https://github.com/jaeyk/ITS-Text-Classification)]
+
+
+## How to cite
+
+If you would like to cite, please follow the below example:
+
+```
+Jae Yeon Kim. (2020). tidyethnicnewws [Computer Software]. Retrieved from https://github.com/jaeyk/tidyethnicnews
+```
