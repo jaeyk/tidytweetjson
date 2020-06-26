@@ -115,7 +115,7 @@ This package has been useful for me to collect data for [my dissertation](https:
 
 ## How to cite
 
-If you would like to cite, please follow the below example:
+If you would like to cite, please do something like the following:
 
 ```
 Jae Yeon Kim. (2020). tidyethnicnewws [Computer Software]. Retrieved from https://github.com/jaeyk/tidyethnicnews
