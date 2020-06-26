@@ -4,6 +4,8 @@ An R Package for Turning Ethnic NewsWatch Search Results into Tidyverse-ready Da
 
 Author: [Jae Yeon Kim](https://jaeyk.github.io/)
 
+File an [issue](https://github.com/jaeyk/tidyethnicnews/issues) if you have problems, questions or suggestions.
+
 ## Summary
 
 The [Ethnic NewsWatch database](https://about.proquest.com/products-services/ethnic_newswatch.html), provided by [ProQuest](https://about.proquest.com/), has compiled more than 2.5 million articles published in US ethnic newspapers and magazines. The database covers the following groups:
