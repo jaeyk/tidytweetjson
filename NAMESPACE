@@ -3,7 +3,6 @@
 export(jsonl_to_df)
 export(jsonl_to_df_all)
 importFrom(dplyr,full_join)
-importFrom(dplyr,left_join)
 importFrom(dplyr,rename)
 importFrom(magrittr,"%>%")
 importFrom(purrr,pmap)

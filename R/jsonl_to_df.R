@@ -13,7 +13,7 @@
 #' @importFrom tidyjson spread_values
 #' @importFrom tidyjson jstring
 #' @importFrom tidyjson jnumber
-#' @importFrom dplyr left_join
+#' @importFrom dplyr full_join
 #' @export
 
 jsonl_to_df <- function(file_path){
@@ -46,6 +46,6 @@ jsonl_to_df <- function(file_path){
 	message(paste("Parsing JSON done."))
 
         # full join
-	outcome <- left_join(with_ccodes, df)
+	outcome <- full_join(with_ccodes, df)
 
 }
