@@ -18,8 +18,15 @@
 
 jsonl_to_df <- function(file_path){
 
-	# Import a JSON file
+  # Save file name 
+  
+  file_name <- strsplit(x = file_path, 
+                       split = "[/]") 
+  
+  file_name <- file_name[[1]][length(file_name[[1]])]
 
+  # Import a JSON file
+    
 	# test: listed <- read_json(file.choose(), format = c("jsonl"))
 
 	listed <- read_json(file_path, format = c("jsonl"))
@@ -44,7 +51,7 @@ jsonl_to_df <- function(file_path){
 	       user.friends_count = jnumber("user.friends_count")) %>%
 	       as_tibble
 
-	message(paste("Parsing ", file_path, " done."))
+	message(paste("Parsing", file_name, "done."))
 
   # full join
 	outcome <- full_join(with_ccodes, df)
