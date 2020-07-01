@@ -1,0 +1,50 @@
+#' Parse a Tweet JSON file into a dataframe
+#'
+#' @param file_path A file path which indicates a Tweet JSON file. This input should be a string vector.
+#'
+#' @return A dataframe with eight columns ("document.id", "ccode", "created_at", "full_text",
+#'																				 "retweet_count", "favorite_count", "user.followers_count", "user.friends_count")
+#' @importFrom tidyjson read_json
+#' @importFrom tidyjson enter_object
+#' @importFrom tidyjson append_values_string
+#' @importFrom tidyjson as_tibble
+#' @importFrom dplyr rename
+#' @importFrom tidyjson spread_values
+#' @importFrom tidyjson jstring
+#' @importFrom tidyjson jnumber
+#' @importFrom dplyr left_join
+#' @export
+
+twitter_jsonl2_df <- function(file_path){
+
+	# Import a JSON file
+
+	# test: listed <- read_json(file.choose(), format = c("jsonl"))
+
+	listed <- read_json(file_path, format = c("jsonl"))
+
+	# IDs of the Tweets with country codes
+
+	with_ccodes <- listed %>%
+	       enter_object("place") %>%
+	       enter_object("country_code") %>%
+	       append_values_string() %>%
+	       as_tibble %>%
+	       rename(ccode = string)
+
+	df <- listed %>%
+	spread_values(
+	       created_at = jstring("created_at"),
+	       full_text = jstring("full_text"),
+	       retweet_count = jnumber("retweet_count"),
+	       favorite_count = jnumber("favorite_count"),
+	       user.followers_count = jnumber("user.followers_count"),
+	       user.friends_count = jnumber("user.friends_count")) %>%
+	       as_tibble
+
+	message(paste("Parsing JSON done."))
+
+        # full join
+	outcome <- left_join(with_ccodes, df)
+
+}
