@@ -21,7 +21,7 @@ filename <- list.files(dir_path,
 
 df <- list(filename) %>%
 
-      # Apply twitter_jsonl2_df function to items on the list
+      # Apply json_to_df function to items on the list
       pmap(~jsonl_to_df(.)) %>%
 
       # Full join the list of dataframes
