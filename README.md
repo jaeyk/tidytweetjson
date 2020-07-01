@@ -53,7 +53,7 @@ $ twarc hydrate covid19.tsv [hypothetical data] > search.jsonl
 - If the downloaded Tweet JSON file is too large to be loaded and parsed in an R session, you may want to split it (divide-and-conquer strategy).
 
 1. Save the large JSON file in a directory (ideally, it is the only file in the directory).
-2. Open a terminal (commnad-line interface window), and split the large JSON file using the following command. After that, you will see several files appeared in the directory. Each of these files should have 1,000 Tweets or fewer. All of these file names should start with "x", as in "xaa".
+2. Open a terminal (commnad-line interface window), and split the large JSON file using the following command. After that, you will see several files appeared in the directory. Each of these files should have 1,000 Tweets or fewer. All of these file names **should start with "x", as in "xaa".**
 
 ```bash
 #Divide the JSON file by 1000 lines (Tweets)
