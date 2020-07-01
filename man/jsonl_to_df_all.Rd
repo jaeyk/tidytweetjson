@@ -10,7 +10,7 @@ jsonl_to_df_all(dir_path)
 \item{dir_path}{A directory path where a user saved Tweet JSON files. This input should be a string vector.}
 }
 \value{
-A dataframe with eight columns: "document.id", "ccode", "created_at", "full_text", "retweet_count", "favorite_count", "user.followers_count", "user.friends_count"
+A dataframe with nine columns: "id", "document.id", "country_code", "created_at", "full_text", "retweet_count", "favorite_count", "user.followers_count", "user.friends_count"
 }
 \description{
 Parse multiple Tweet JSON files into a dataframe
