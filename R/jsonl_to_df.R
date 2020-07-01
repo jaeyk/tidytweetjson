@@ -2,8 +2,8 @@
 #'
 #' @param file_path A file path which indicates a Tweet JSON file. This input should be a string vector.
 #'
-#' @return A dataframe with eight columns ("document.id", "ccode", "created_at", "full_text",
-#'																				 "retweet_count", "favorite_count", "user.followers_count", "user.friends_count")
+#' @return A dataframe with eight columns: "document.id", "ccode", "created_at", "full_text", "retweet_count", "favorite_count", "user.followers_count", "user.friends_count"
+#' 
 #' @importFrom tidyjson read_json
 #' @importFrom magrittr "%>%"
 #' @importFrom tidyjson enter_object
