@@ -27,7 +27,7 @@ df <- list(filename) %>%
       # Full join the list of dataframes
       reduce(full_join,
              by = c("document.id",
-                    "ccode",
+                    "country_code",
                     "created_at",
                     "full_text",
                     "retweet_count",

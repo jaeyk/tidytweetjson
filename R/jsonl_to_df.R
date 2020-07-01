@@ -31,8 +31,9 @@ jsonl_to_df <- function(file_path){
 	       enter_object("country_code") %>%
 	       append_values_string() %>%
 	       as_tibble %>%
-	       rename(ccode = "string")
+	       rename(country_code = "string")
 
+	# Extract other key elements from the JSON file
 	df <- listed %>%
 	spread_values(
 	       created_at = jstring("created_at"),
@@ -43,9 +44,11 @@ jsonl_to_df <- function(file_path){
 	       user.friends_count = jnumber("user.friends_count")) %>%
 	       as_tibble
 
-	message(paste("Parsing JSON done."))
+	message(paste("Parsing ", file_path, " done."))
 
-        # full join
+  # full join
 	outcome <- full_join(with_ccodes, df)
 
+	# output
+	outcome
 }
