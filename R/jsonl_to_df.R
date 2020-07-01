@@ -16,7 +16,7 @@
 #' @importFrom dplyr left_join
 #' @export
 
-twitter_jsonl2_df <- function(file_path){
+jsonl_to_df <- function(file_path){
 
 	# Import a JSON file
 

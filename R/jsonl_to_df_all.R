@@ -10,7 +10,7 @@
 #' @export
 
 
-twitter_jsonl2_df_all <- function(dir_path){
+jsonl_to_df_all <- function(dir_path){
 
 # Create a list of the smaller JSON files
 
