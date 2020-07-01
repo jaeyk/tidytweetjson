@@ -1,6 +1,6 @@
 # tidytweetjson
 
-An R Package for Turning Tweet JSON files into a tidyverse-ready dataframe 
+An R package for turning Tweet JSON files into a tidyverse-ready dataframe 
 
 Author: [Jae Yeon Kim](https://jaeyk.github.io/)
 
