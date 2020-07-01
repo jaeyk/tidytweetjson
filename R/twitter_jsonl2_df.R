@@ -5,6 +5,7 @@
 #' @return A dataframe with eight columns ("document.id", "ccode", "created_at", "full_text",
 #'																				 "retweet_count", "favorite_count", "user.followers_count", "user.friends_count")
 #' @importFrom tidyjson read_json
+#' @importFrom magrittr "%>%"
 #' @importFrom tidyjson enter_object
 #' @importFrom tidyjson append_values_string
 #' @importFrom tidyjson as_tibble
@@ -30,7 +31,7 @@ twitter_jsonl2_df <- function(file_path){
 	       enter_object("country_code") %>%
 	       append_values_string() %>%
 	       as_tibble %>%
-	       rename(ccode = string)
+	       rename(ccode = "string")
 
 	df <- listed %>%
 	spread_values(
