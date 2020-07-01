@@ -10,10 +10,12 @@ File an [issue](https://github.com/jaeyk/tidytweetjson/issues) if you have probl
 
 Twitter data is an important resource for social science research. (As of July 1, 2020, if you queried "Twitter" in Google Scholar, it returned more than seven million search results.) However, parsing a great deal of Twitter JSON data is not an easy task for researchers with little programming experience. This package provides functions to clean and wrangle Tweet JSON files simply and quickly.
 
-1. Tidying a Tweet JSON file
+**1. Tidying a Tweet JSON file**
+
 Most social science researchers have only worked with clearly structured data (e.g., spreadsheets). If one downloads Tweets from [the Twitter API](https://developer.twitter.com/en), these Tweets were stored in a semi-structured file format called JSON (JaveScript Object Notation). In simple terms, it has some structure but does not resemble a spreadsheet. With `tidytweetjson`, one does not need to understand a JSON file structure. **The package helps you to get a tidy data from a Tweet JSON file simply and quickly.**
 
-2. Tidying multiple Tweet JSON files
+**2. Tidying multiple Tweet JSON files**
+
 The other challenge is that, often, the number of tweets you want to analyze is large (several GBs or TBs). One way you can work around this problem is to split the JSON file, parse each JSON file into a dataframe, and join them. With `tidytweetjson`, one does not need to write a for loop to perform this task. **The package helps you to parse and join multiple CSV files into a tidyverse-ready dataframe with just one command.**
 
 ## Installation
