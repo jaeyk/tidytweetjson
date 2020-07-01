@@ -6,7 +6,7 @@ Title: Tidying Tweet JSON files
 Authors@R: person("Jae Yeon", "Kim", email = "jaeyeonkim@berkeley.edu", role = c("ctb", "cre"))
 Maintainer: Jae Yeon Kim <jaeyeonkim@berkeley.edu>
 BugReports: https://github.com/jaeyk/tidyethnicnews
-Description: Twitter data is an important data resource for social science research. However, parsing a big Twitter JSON data is not an easy task for researchers with little programming experience. This package provides functions to clean and wrangle Tweet JSON files simply and quickly.
+Description: Twitter data is an important resource for social science research. However, parsing a great deal of Twitter JSON data is not an easy task for researchers with little programming experience. This package provides functions to clean and wrangle Tweet JSON files simply and quickly.
 Depends: R (>= 3.6)
 License: MIT + file LICENSE
 Encoding: UTF-8
