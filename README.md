@@ -1,6 +1,6 @@
 # tidytweetjson
 
-An R package for turning Tweet JSON files into a tidyverse-ready dataframe 
+An R Package for Turning Tweet JSON Files into a Tidyverse-ready Dataframe
 
 Author: [Jae Yeon Kim](https://jaeyk.github.io/)
 
@@ -19,13 +19,13 @@ devtools::install_github("jaeyk/tidytweetjson",
 ```
 
 ## Responsible use [TBD]
-`tidytweetjson` should be used in strict accordance with Twitter [Terms of Service](https://twitter.com/en/tos). 
+`tidytweetjson` should be used in strict accordance with Twitter [Terms of Service](https://twitter.com/en/tos).
 
 ### How to download and split a big Tweet JSON file [TBD]
 
 ## Usage [TBD]
 
-Now, you have a list of ... files. Collecting the data has been tedious. By contrast, turning these files into a tidyverse-ready dataframe is incredibly easy and lightning fast with the help of `tidytweetjson`. The parsed text data has eight columns: Its rows are tweets. 
+Now, you have a list of ... files. Collecting the data has been tedious. By contrast, turning these files into a tidyverse-ready dataframe is incredibly easy and lightning fast with the help of `tidytweetjson`. The parsed text data has eight columns: Its rows are tweets.
 
 ### 1. `jsonl_to_df()`: Turn a Tweet JSON file into a dataframe
 
