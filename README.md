@@ -86,7 +86,7 @@ As a test, select one of the JSON files and inspect whether the result is desira
 # Load library
 library(tidytweetjson)
 
-# You need to choose an HTML search result
+# You need to choose a Tweet JSON file
 filepath <- file.choose()
 
 # Assign the parsed result to the `df` object
