@@ -102,7 +102,7 @@ Again, the `df_all` object should have nine columns. I tested the running time p
 # Load library
 library(tidytweetjson)
 
-# You need to designate a directory path where you saved the splitted JSON files.
+# You need to designate a directory path where you saved the list of JSON files.
 dirpath <- tcltk::tk_choose.dir()
 
 # Assign the parsed result to the `df_all` object
