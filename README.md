@@ -16,7 +16,7 @@ Most social science researchers have only worked with clearly structured data (e
 
 **2. Tidying multiple Tweet JSON files**
 
-The other challenge is that, often, the number of tweets you want to analyze is large (several GBs or TBs). One way you can work around this problem is to split the JSON file, parse each JSON file into a dataframe, and join them. With `tidytweetjson`, one does not need to write a for loop to perform this task. **The package helps you to parse and join multiple CSV files into a tidyverse-ready dataframe with just one command.**
+The other challenge is that, often, the number of tweets you want to analyze is large (several GBs or TBs). One way you can work around this problem is to split the JSON file, parse each JSON file into a dataframe, and join them. With `tidytweetjson`, one does not need to write a for loop to perform this task. **The package helps you to parse and join multiple JSON files into a tidyverse-ready dataframe with just one command.**
 
 ## Installation
 
