@@ -10,7 +10,7 @@ jsonl_to_df(file_path)
 \item{file_path}{A file path which indicates a Tweet JSON file. This input should be a string vector.}
 }
 \value{
-A dataframe with eight columns: "id", "document.id", "country_code", "created_at", "full_text", "retweet_count", "favorite_count", "user.followers_count", "user.friends_count"
+A dataframe with ten columns: "id", "document.id", "country_code", "location", "created_at", "full_text", "retweet_count", "favorite_count", "user.followers_count", "user.friends_count"
 }
 \description{
 Parse a Tweet JSON file into a dataframe
