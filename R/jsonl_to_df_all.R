@@ -23,7 +23,7 @@ filename <- list.files(dir_path,
 
 df <- list(filename) %>%
 
-      future::plan("multiprocess")
+      future::plan("multisession")
 
       # Apply jsonl_to_df function to items on the list
       future_pmap(~jsonl_to_df(.)) %>%
