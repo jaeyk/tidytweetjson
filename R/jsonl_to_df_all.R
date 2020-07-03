@@ -17,13 +17,11 @@ jsonl_to_df_all <- function(dir_path){
 
 # Create a list of the splitted JSON files
 
-filename <- list.files(dir_path,
+      filename <- list.files(dir_path,
                 pattern = '^x',
                 full.names = TRUE)
 
-df <- list(filename) %>%
-
-      future::plan("multisession")
+      df <- list(filename) %>%
 
       # Apply jsonl_to_df function to items on the list
       future_pmap(~jsonl_to_df(.)) %>%
