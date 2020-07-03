@@ -95,7 +95,7 @@ df <- jsonl_to_df(filepath)
 
 ### 2. `jsonl_to_df_all()`: Turn all Tweet JSON files, saved in a directory, into a dataframe
 
-Again, the `df_all` object should have ten columns. If your JSON file is heavy (>10GB), I recommend running `future::plan("multiprocess")` before using this function to speed up the process.
+Again, the `df_all` object should have ten columns. If your JSON file is heavy (>10GB), I recommend running [`future::plan("multiprocess")`](https://cran.r-project.org/web/packages/future/vignettes/future-1-overview.html) before using this function to speed up the process.
 
 ```r
 
