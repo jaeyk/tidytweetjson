@@ -79,7 +79,7 @@ The parsed JSON data has a tidy structure. It has nine columns: (user) `id`, (tw
 
 ### 1. `jsonl_to_df()`: Turn a Tweet JSON file into a dataframe
 
-As a test, select one of the JSON files and inspect whether the result is desirable. According to the performance test done by the `microbenchmark` package, the `jsonl_to_df()` function takes average **0.2 seconds** to turn **1000 Tweets** into a tidy dataframe.
+As a test, select one of the JSON files and inspect whether the result is desirable. According to the performance test done by the `microbenchmark` package, the `jsonl_to_df()` function takes average **5 seconds** to turn **1000 Tweets** into a tidy dataframe.
 
 ```r
 

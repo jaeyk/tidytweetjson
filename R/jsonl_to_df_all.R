@@ -8,6 +8,8 @@
 #' @importFrom magrittr "%>%"
 #' @importFrom purrr pmap
 #' @importFrom purrr reduce
+#' @importFrom future plan
+#' @importFrom furrr future_pmap
 #' @export
 
 
@@ -21,8 +23,10 @@ filename <- list.files(dir_path,
 
 df <- list(filename) %>%
 
+      future::plan("multiprocess")
+
       # Apply jsonl_to_df function to items on the list
-      pmap(~jsonl_to_df(.)) %>%
+      future_pmap(~jsonl_to_df(.)) %>%
 
       # Full join the list of dataframes
       reduce(full_join,
