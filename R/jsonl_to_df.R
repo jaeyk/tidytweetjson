@@ -2,7 +2,7 @@
 #'
 #' @param file_path A file path which indicates a Tweet JSON file. This input should be a string vector.
 #'
-#' @return A dataframe with eight columns: "id", "document.id", "country_code", "created_at", "full_text", "retweet_count", "favorite_count", "user.followers_count", "user.friends_count"
+#' @return A dataframe with ten columns: "id", "document.id", "country_code", "location", "created_at", "full_text", "retweet_count", "favorite_count", "user.followers_count", "user.friends_count"
 #' 
 #' @importFrom tidyjson read_json
 #' @importFrom magrittr "%>%"
@@ -27,19 +27,29 @@ jsonl_to_df <- function(file_path){
 
   # Import a JSON file
     
-	# test: listed <- read_json(file.choose(), format = c("jsonl"))
+	# test: 
+	listed <- read_json(file.choose(), format = c("jsonl"))
 
 	listed <- read_json(file_path, format = c("jsonl"))
 
 	# IDs of the Tweets with country codes
 
-	with_ccodes <- listed %>%
+	ccodes <- listed %>%
 	       enter_object("place") %>%
 	       enter_object("country_code") %>%
 	       append_values_string() %>%
 	       as_tibble %>%
-	       rename(country_code = "string")
+	       rename("country_code" = "string")
 
+	# IDs of the Tweets with location 
+	
+	locations <- listed %>%
+	       enter_object("user") %>%
+	       enter_object("location") %>%
+	       append_values_string() %>%
+	       as_tibble %>%
+	       rename(location = "string")
+	
 	# Extract other key elements from the JSON file
 	df <- listed %>%
 	spread_values(
@@ -55,7 +65,7 @@ jsonl_to_df <- function(file_path){
 	message(paste("Parsing", file_name, "done."))
 
   # full join
-	outcome <- full_join(with_ccodes, df)
+	outcome <- full_join(ccodes, df) %>% full_join(locations)
 
 	# output
 	outcome

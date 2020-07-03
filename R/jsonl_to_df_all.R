@@ -2,7 +2,7 @@
 #'
 #' @param dir_path A directory path where a user saved Tweet JSON files. This input should be a string vector.
 #'
-#' @return A dataframe with nine columns: "id", "document.id", "country_code", "created_at", "full_text", "retweet_count", "favorite_count", "user.followers_count", "user.friends_count"
+#' @return A dataframe with ten columns: "id", "document.id", "country_code", "location", "created_at", "full_text", "retweet_count", "favorite_count", "user.followers_count", "user.friends_count"
 #'
 #' @importFrom dplyr full_join
 #' @importFrom magrittr "%>%"
@@ -28,6 +28,7 @@ df <- list(filename) %>%
       reduce(full_join,
              by = c("id",
                     "document.id",
+                    "location",
                     "country_code",
                     "created_at",
                     "full_text",
