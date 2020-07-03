@@ -28,7 +28,7 @@ jsonl_to_df <- function(file_path){
   # Import a JSON file
     
 	# test: 
-	listed <- read_json(file.choose(), format = c("jsonl"))
+	# listed <- read_json(file.choose(), format = c("jsonl"))
 
 	listed <- read_json(file_path, format = c("jsonl"))
 
