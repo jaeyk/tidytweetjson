@@ -75,7 +75,7 @@ $ gsplit -1000 search.jsonl
 
 Now, you have a Tweet JSON file or a list of them. Collecting the Tweet JSON file could have has been tedious, especially if you have never done this before. By contrast, turning these files into a tidyverse-ready dataframe is incredibly easy and lightning fast with the help of `tidytweetjson`.
 
-The parsed JSON data has a tidy structure. It has nine columns: (user) `id`, (tweet) `document.id`, `country_code` (country code), (user) `location`, `created_at` (time stamp), `full_text` (tweets), `retweet_count`, `favorite_count`, `user.followers_count`, and `user.friends_count`. Its rows are tweets.
+The parsed JSON data has a tidy structure. It has nine columns: (user) `id`, `country_code` (country code), (user) `location`, `created_at` (time stamp), `full_text` (tweets), `retweet_count`, `favorite_count`, `user.followers_count`, and `user.friends_count`. Its rows are tweets.
 
 ### 1. `jsonl_to_df()`: Turn a Tweet JSON file into a dataframe
 
@@ -95,7 +95,7 @@ df <- jsonl_to_df(filepath)
 
 ### 2. `jsonl_to_df_all()`: Turn all Tweet JSON files, saved in a directory, into a dataframe
 
-Again, the `df_all` object should have ten columns. I tested the running time performance using the `tictoc` package. The `jsonl_to_df_all()` function takes **1,108 seconds**, or **18 minutes**, to turn **1,057,453 Tweets** into a dataframe.
+Again, the `df_all` object should have nine columns. I tested the running time performance using the `tictoc` package. The `jsonl_to_df_all()` function takes **1,108 seconds**, or **18 minutes**, to turn **1,057,453 Tweets** into a dataframe.
 
 ```r
 
