@@ -95,8 +95,7 @@ df <- jsonl_to_df(filepath)
 
 ### 2. `jsonl_to_df_all()`: Turn all Tweet JSON files, saved in a directory, into a dataframe
 
-Again, the `df_all` object should have ten columns. If your JSON file is heavy (>10GB), I recommend running [`future::plan("multiprocess")`](https://cran.r-project.org/web/packages/future/vignettes/future-1-overview.html) before using this function to speed up the process. I tested the running time performance using the tictoc package. The `jsonl_to_df_all()` function takes 17,148 seconds, or **4.76 hours**, to turn **5,050,042** tweets into a data frame.
-
+Again, the `df_all` object should have nine columns. If your JSON file is heavy (>10GB), I recommend running [`future::plan("multiprocess")`](https://cran.r-project.org/web/packages/future/vignettes/future-1-overview.html) before using this function to speed up the process. I tested the running time performance using the tictoc package. The `jsonl_to_df_all()` function takes 17,148 seconds, or **4.76 hours**, to turn **5,050,042** tweets into a data frame.
 
 ```r
 
@@ -110,6 +109,10 @@ dirpath <- tcltk::tk_choose.dir()
 df_all <- jsonl_to_df_all(dirpath)
 
 ```
+
+### 3. `add_date()`: Add a date variable that parses `created_at` variable in the dataframe [TBD]
+
+`create_at` variable records date and time in a way that is not directly usable for data modeling and visualization in R. The `add_date()` function parses `create_at` variable into a date variable (in Year-Month-Day format).
 
 ## How to cite
 
