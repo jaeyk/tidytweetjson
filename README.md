@@ -110,9 +110,9 @@ df_all <- jsonl_to_df_all(dirpath)
 
 ```
 
-### 3. `add_date()`: Add a date variable that parses Tweet timestamps into a date variable
+### 3. `add_date()`: Add a date variable that parses Tweet timestamps into date format
 
-`create_at` variable (Tweet timestamps) is not immediately usable for data modeling and visualization in R. The `add_date()` function solves this problem by parsing `create_at` variable into a date variable (in Year-Month-Day format).
+`create_at` variable (Tweet timestamps) is not immediately usable for data modeling and visualization in R. The `add_date()` function solves this problem by parsing `create_at` variable into a new variable called `date` that is in date format (in Year-Month-Day format).
 
 ```r
 # Add date variable to the data.frame
