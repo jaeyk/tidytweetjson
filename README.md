@@ -95,7 +95,8 @@ df <- jsonl_to_df(filepath)
 
 ### 2. `jsonl_to_df_all()`: Turn all Tweet JSON files, saved in a directory, into a dataframe
 
-Again, the `df_all` object should have nine columns. I tested the running time performance using the `tictoc` package. The `jsonl_to_df_all()` function takes **1,108 seconds**, or **18 minutes**, to turn **1,057,453 Tweets** into a dataframe.
+Again, the `df_all` object should have ten columns. If your JSON file is heavy (>10GB), I recommend running [`future::plan("multiprocess")`](https://cran.r-project.org/web/packages/future/vignettes/future-1-overview.html) before using this function to speed up the process. I tested the running time performance using the tictoc package. The `jsonl_to_df_all()` function takes 17,148 seconds, or **4.76 hours**, to turn **5,050,042** tweets into a data frame.
+
 
 ```r
 
