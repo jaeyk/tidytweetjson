@@ -117,6 +117,21 @@ df_all <- jsonl_to_df_all(dirpath)
 ```r
 # Add date variable to the data.frame
 df <- add_date(df)
+
+# Head 10 rows of the target and parsed columns 
+df[1:10,] %>% select(created_at, date)
+
+created_at                      date
+Mon Jan 27 18:40:17 +0000 2020	2020-01-27
+Tue Jan 28 20:52:03 +0000 2020	2020-01-28
+Fri Jan 31 19:33:48 +0000 2020	2020-01-31
+Wed Jan 29 17:02:34 +0000 2020	2020-01-29
+Fri Jan 31 14:21:47 +0000 2020	2020-01-31
+Thu Jan 30 13:35:33 +0000 2020	2020-01-30
+Thu Jan 30 16:05:08 +0000 2020	2020-01-30
+Fri Jan 31 10:55:36 +0000 2020	2020-01-31
+Thu Jan 30 20:42:18 +0000 2020	2020-01-30
+Mon Jan 27 17:19:58 +0000 2020	2020-01-27
 ```
 
 ## How to cite
