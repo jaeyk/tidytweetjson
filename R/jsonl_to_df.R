@@ -2,7 +2,7 @@
 #'
 #' @param file_path A file path which indicates a Tweet JSON file. This input should be a string vector.
 #'
-#' @return A dataframe with ten columns: "id", "document.id", "country_code", "location", "created_at", "full_text", "retweet_count", "favorite_count", "user.followers_count", "user.friends_count"
+#' @return A dataframe with nine columns: "id", "country_code", "location", "created_at", "full_text", "retweet_count", "favorite_count", "user.followers_count", "user.friends_count"
 #' 
 #' @importFrom tidyjson read_json
 #' @importFrom magrittr "%>%"
@@ -10,6 +10,7 @@
 #' @importFrom tidyjson append_values_string
 #' @importFrom tidyjson as_tibble
 #' @importFrom dplyr rename
+#' @importFrom dplyr select
 #' @importFrom tidyjson spread_values
 #' @importFrom tidyjson jstring
 #' @importFrom tidyjson jnumber
@@ -68,5 +69,5 @@ jsonl_to_df <- function(file_path){
 	outcome <- full_join(ccodes, df) %>% full_join(locations)
 
 	# output
-	outcome
+	outcome %>% select(-c("document.id"))
 }
