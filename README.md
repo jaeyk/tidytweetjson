@@ -112,7 +112,7 @@ df_all <- jsonl_to_df_all(dirpath)
 
 ### 3. `add_date()`: Add a date variable that parses `created_at` variable in the dataframe [TBD]
 
-`create_at` variable records date and time in a way that is not directly usable for data modeling and visualization in R. The `add_date()` function parses `create_at` variable into a date variable (in Year-Month-Day format).
+`create_at` variable (Tweet timestamps) is not directly usable for data modeling and visualization in R. The `add_date()` function solves this problem by parsing `create_at` variable into a date variable (in Year-Month-Day format).
 
 ## How to cite
 
