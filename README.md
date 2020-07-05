@@ -31,9 +31,9 @@ devtools::install_github("jaeyk/tidytweetjson",
 ## Responsible use
 `tidytweetjson` should be used in strict accordance with Twitter's [developer terms](https://developer.twitter.com/en/developer-terms/more-on-restricted-use-cases).
 
-### How to download and split a big Tweet JSON file
+## How to download and split a big Tweet JSON file
 
-#### Downalod a Tweet JSON file
+### Downalod a Tweet JSON file
 
 1. [Sign up](https://developer.twitter.com/en/apply-for-access) a Twitter developer account.
 2. Either search for Tweets or turn a Tweet ID dataset into into Tweets (called *[hydrating](https://medium.com/on-archivy/on-forgetting-e01a2b95272#.lrkof12q5)*) using the Twitter API. I highly recommend using [twarc](https://github.com/DocNow/twarc), a command line tool, and Python library to archive Twitter JSON data. Twarc is fast, reliable, and easy to use. If you are using Twarc for the first time, refer to [this tutorial](https://github.com/alblaine/twarc-tutorial). You just need to type one or two commands in the command line to download the Twitter data you want. The followings are examples.
@@ -48,7 +48,7 @@ $ twarc hydrate covid19.tsv [hypothetical data] > search.jsonl
 
 - It is really important to **save these tweets into a `jsonl` format;** `jsonl` extension refers to JSON **Lines** files. This structure is useful for splitting JSON data into smaller chunks, if it is too large.
 
-#### Split a Tweet JSON file
+### Split a Tweet JSON file
 
 - If the downloaded Tweet JSON file is too large to be loaded and parsed in an R session, you may want to split it (divide-and-conquer strategy).
 
