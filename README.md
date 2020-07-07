@@ -134,5 +134,5 @@ Fri Jan 31 14:21:47 +0000 2020	2020-01-31
 If you would like to cite, please do something like the following:
 
 ```
-Jae Yeon Kim. (2020). tidytweetjson [Computer Software]. Retrieved from https://github.com/jaeyk/tidyethnicnews
+Jae Yeon Kim. (2020). tidytweetjson. R package version 0.1.2. Retrieved from https://github.com/jaeyk/tidyethnicnews
 ```
