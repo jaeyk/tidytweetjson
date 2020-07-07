@@ -129,6 +129,14 @@ Wed Jan 29 17:02:34 +0000 2020	2020-01-29
 Fri Jan 31 14:21:47 +0000 2020	2020-01-31
 ```
 
+### 4. `add_US_location()`: Add a dummy variable that identifies whether a Twitter user is located in the US
+
+`location` variable indicates the location of a Twitter user. However, it is difficult to use this variable as Twitter users record their locations in non-unified ways (e.g., `Berkeley`, `Berkeley, CA`, `Berkeley, USA`, `The People's Republic of Berkeley`). The `add_US_location` function searches whether the string pattern, the `location` input, is matched with the names of the major US cities (population size > 40,000) and states. It also validates the data quality by checking whether the string pattern is not matched with the names of the non-US countries. The function returns a dummy variable in which a `1` represents `located in the US`, and a `0` represents `not located in the US`.
+
+```r
+# Add date variable to the data.frame
+df <- add_date(df)
+
 ## How to cite
 
 If you would like to cite, please do something like the following:
