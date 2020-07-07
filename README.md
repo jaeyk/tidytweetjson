@@ -133,6 +133,21 @@ Fri Jan 31 14:21:47 +0000 2020	2020-01-31
 
 `location` variable indicates the location of a Twitter user. However, it is difficult to use this variable as Twitter users record their locations in non-unified ways (e.g., `Berkeley`, `Berkeley, CA`, `Berkeley, USA`, `The People's Republic of Berkeley`). The `add_US_location` function searches whether the string pattern, the `location` input, is matched with the names of the major US cities (population size > 40,000) and states. It also validates the data quality by checking whether the string pattern is not matched with the names of the non-US countries. The function returns a dummy variable called `US_location` in which a `1` represents `located in the US`, and a `0` represents `not located in the US`.
 
+```r
+# Add US_location variable to the data.frame
+df <- add_US_location(df)
+
+# Head 5 rows of the target and parsed columns
+df[1:5,] %>% select(location, US_location)
+
+location            US_location
+Los Angeles, CA	    1
+San Jose, CA	    1
+Delaware     	    1
+United States	    1
+Washington, DC	    1
+```
+
 ## How to cite
 
 If you would like to cite, please do something like the following:

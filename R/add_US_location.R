@@ -62,7 +62,7 @@ add_US_location <- function(df){
 
     # Mutate
 
-    df[["US_location"]] <- df %>% ifelse("US" == 1 & "non_US" == 0, 1, 0)
+    df[["US_location"]] <- ifelse(df[["US"]] == 1 & df[["non_US"]] == 0, 1, 0)
 
     # Remove
 
