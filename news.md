@@ -12,4 +12,4 @@
 
 # keyATM 0.1.0
 ### Major changes
-* This is the first release of tidytweetjson.
+* This is the first release of `tidytweetjson`.
