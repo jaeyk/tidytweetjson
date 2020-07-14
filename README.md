@@ -12,7 +12,7 @@ Twitter data is an important resource for social science research. (As of July 1
 
 **1. Tidying a Tweet JSON file**
 
-Most social science researchers have only worked with clearly structured data (e.g., spreadsheets). If one downloads Tweets from [the Twitter API](https://developer.twitter.com/en), these Tweets were stored in a semi-structured file format called JSON (JaveScript Object Notation). In simple terms, it has some structure but does not resemble a spreadsheet. With `tidytweetjson`, one does not need to understand a JSON file structure. **The package helps you to get a tidy data from a Tweet JSON file simply and quickly.**
+Most social science researchers have only worked with clearly structured data (e.g., spreadsheets). If one downloads tweets from [the Twitter API](https://developer.twitter.com/en), these tweets were stored in a semi-structured file format called JSON (JaveScript Object Notation). In simple terms, it has some structure but does not resemble a spreadsheet. With `tidytweetjson`, one does not need to understand a JSON file structure. **The package helps you to get a tidy data from a Tweet JSON file simply and quickly.**
 
 **2. Tidying multiple Tweet JSON files**
 
@@ -36,7 +36,7 @@ devtools::install_github("jaeyk/tidytweetjson",
 ### Downalod a Tweet JSON file
 
 1. [Sign up](https://developer.twitter.com/en/apply-for-access) a Twitter developer account.
-2. Either search for Tweets or turn a Tweet ID dataset into into Tweets (called *[hydrating](https://medium.com/on-archivy/on-forgetting-e01a2b95272#.lrkof12q5)*) using the Twitter API. I highly recommend using [twarc](https://github.com/DocNow/twarc), a command line tool, and Python library to archive Twitter JSON data. Twarc is fast, reliable, and easy to use. If you are using Twarc for the first time, refer to [this tutorial](https://github.com/alblaine/twarc-tutorial). You just need to type one or two commands in the command line to download the Twitter data you want. The followings are examples.
+2. Either search for tweets or turn a tweet ID dataset into into tweets (called *[hydrating](https://medium.com/on-archivy/on-forgetting-e01a2b95272#.lrkof12q5)*) using the Twitter API. I highly recommend using [twarc](https://github.com/DocNow/twarc), a command line tool, and Python library to archive Twitter JSON data. Twarc is fast, reliable, and easy to use. If you are using Twarc for the first time, refer to [this tutorial](https://github.com/alblaine/twarc-tutorial). You just need to type one or two commands in the command line to download the Twitter data you want. The followings are examples.
 
 ```bash
 # search
@@ -53,10 +53,10 @@ $ twarc hydrate covid19.tsv [hypothetical data] > search.jsonl
 - If the downloaded Tweet JSON file is too large to be loaded and parsed in an R session, you may want to split it (divide-and-conquer strategy).
 
 1. Save the large JSON file in a directory (ideally, it is the only file in the directory).
-2. Open a terminal (commnad-line interface window), and split the large JSON file using the following command. After that, you will see several files appeared in the directory. Each of these files should have 1,000 Tweets or fewer. All of these file names **should start with "x", as in "xaa".**
+2. Open a terminal (commnad-line interface window), and split the large JSON file using the following command. After that, you will see several files appeared in the directory. Each of these files should have 1,000 tweets or fewer. All of these file names **should start with "x", as in "xaa".**
 
 ```bash
-#Divide the JSON file by 1000 lines (Tweets)
+#Divide the JSON file by 1000 lines (tweets)
 
 # Linux and Windows (in Bash)
 $ split -1000 search.jsonl
@@ -79,7 +79,7 @@ The parsed JSON data has a tidy structure. It has nine columns: (user) `id`, `co
 
 ### 1. `jsonl_to_df()`: Turn a Tweet JSON file into a dataframe
 
-As a test, select one of the JSON files and inspect whether the result is desirable. According to the performance test done by the `microbenchmark` package, the `jsonl_to_df()` function takes average **5 seconds** to turn **1000 Tweets** into a tidy dataframe.
+As a test, select one of the JSON files and inspect whether the result is desirable. According to the performance test done by the `microbenchmark` package, the `jsonl_to_df()` function takes average **5 seconds** to turn **1000 tweets** into a tidy dataframe.
 
 ```r
 
