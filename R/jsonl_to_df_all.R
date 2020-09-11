@@ -6,10 +6,10 @@
 #'
 #' @importFrom dplyr full_join
 #' @importFrom magrittr "%>%"
-#' @importFrom purrr pmap
+#' @importFrom purrr map
 #' @importFrom purrr reduce
 #' @importFrom future plan
-#' @importFrom furrr future_pmap
+#' @importFrom furrr future_map
 #' @export
 
 
@@ -21,10 +21,10 @@ jsonl_to_df_all <- function(dir_path){
                 pattern = '^x',
                 full.names = TRUE)
 
-      df <- list(filename) %>%
+      df <- filename %>%
 
       # Apply jsonl_to_df function to items on the list
-      future_pmap(~jsonl_to_df(.)) %>%
+      future_map(~jsonl_to_df(.)) %>%
 
       # Full join the list of dataframes
       reduce(full_join,
