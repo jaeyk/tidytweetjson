@@ -105,6 +105,12 @@ library(tidytweetjson)
 # You need to designate a directory path where you saved the list of JSON files.
 dirpath <- tcltk::tk_choose.dir()
 
+# Parallel processing 
+n_cores <- availableCores() - 1
+
+plan(multiprocess, # multicore, if supported, otherwise multisession
+     workers = n_cores) # the maximum number of workers
+
 # Assign the parsed result to the `df_all` object
 df_all <- jsonl_to_df_all(dirpath)
 
@@ -153,5 +159,5 @@ Washington, DC	    1
 If you would like to cite, please do something like the following:
 
 ```
-Jae Yeon Kim. (2020). tidytweetjson. R package version 0.1.3. Retrieved from https://github.com/jaeyk/tidyethnicnews
+Jae Yeon Kim. (2020). tidytweetjson. R package version 0.2.0. Retrieved from https://github.com/jaeyk/tidyethnicnews
 ```
