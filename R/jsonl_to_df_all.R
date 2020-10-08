@@ -4,10 +4,7 @@
 #'
 #' @return A dataframe with nine columns: "id", "document.id", "country_code", "location", "created_at", "full_text", "retweet_count", "favorite_count", "user.followers_count", "user.friends_count"
 #'
-#' @importFrom dplyr full_join
 #' @importFrom magrittr "%>%"
-#' @importFrom purrr map
-#' @importFrom purrr reduce
 #' @importFrom future plan
 #' @importFrom furrr future_map_dfr
 #' @export
@@ -24,7 +21,8 @@ jsonl_to_df_all <- function(dir_path){
       df <- filename %>%
 
       # Apply jsonl_to_df function to items on the list
-      future_map_dfr(~jsonl_to_df(.))
+      future_map_dfr(~jsonl_to_df(.),
+                     .progress = TRUE)
 
 # Output
 return(df)

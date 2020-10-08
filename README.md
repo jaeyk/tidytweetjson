@@ -36,7 +36,11 @@ devtools::install_github("jaeyk/tidytweetjson",
 ### Downalod a Tweet JSON file
 
 1. [Sign up](https://developer.twitter.com/en/apply-for-access) a Twitter developer account.
+<<<<<<< HEAD
 2. Either search for tweets or turn a Tweet ID dataset into into tweets (called *[hydrating](https://medium.com/on-archivy/on-forgetting-e01a2b95272#.lrkof12q5)*) using the Twitter API. I highly recommend using [twarc](https://github.com/DocNow/twarc), a command line tool, and Python library to archive Twitter JSON data. Twarc is fast, reliable, and easy to use. If you are using Twarc for the first time, refer to [this tutorial](https://github.com/alblaine/twarc-tutorial). You just need to type one or two commands in the command line to download the Twitter data you want. The followings are examples.
+=======
+2. Either search for tweets or turn a tweet ID dataset into into tweets (called *[hydrating](https://medium.com/on-archivy/on-forgetting-e01a2b95272#.lrkof12q5)*) using the Twitter API. I highly recommend using [twarc](https://github.com/DocNow/twarc), a command line tool, and Python library to archive Twitter JSON data. Twarc is fast, reliable, and easy to use. If you are using Twarc for the first time, refer to [this tutorial](https://github.com/alblaine/twarc-tutorial). You just need to type one or two commands in the command line to download the Twitter data you want. The followings are examples.
+>>>>>>> master
 
 ```bash
 # search
