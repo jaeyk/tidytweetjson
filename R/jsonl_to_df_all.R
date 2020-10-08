@@ -9,7 +9,7 @@
 #' @importFrom purrr map
 #' @importFrom purrr reduce
 #' @importFrom future plan
-#' @importFrom furrr future_map
+#' @importFrom furrr future_map_dfr
 #' @export
 
 
@@ -24,21 +24,9 @@ jsonl_to_df_all <- function(dir_path){
       df <- filename %>%
 
       # Apply jsonl_to_df function to items on the list
-      future_map(~jsonl_to_df(.)) %>%
-
-      # Full join the list of dataframes
-      reduce(full_join,
-             by = c("id",
-                    "location",
-                    "country_code",
-                    "created_at",
-                    "full_text",
-                    "retweet_count",
-                    "favorite_count",
-                    "user.followers_count",
-                    "user.friends_count"))
+      future_map_dfr(~jsonl_to_df(.))
 
 # Output
-df
+return(df)
 
 }
