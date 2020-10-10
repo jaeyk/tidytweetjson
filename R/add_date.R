@@ -1,4 +1,4 @@
-#' Parse created_at variable into a date variable 
+#' Turn created_at field into a date variable 
 #'
 #' @param df A parsed Tweet JSON file (data.frame) which includes created_at variable 
 #'
