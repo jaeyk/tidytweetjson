@@ -37,9 +37,8 @@ devtools::install_github("jaeyk/tidytweetjson",
 
 1. [Sign up](https://developer.twitter.com/en/apply-for-access) a Twitter developer account.
 
-2. Either search for tweets or turn a Tweet ID dataset into into tweets (called *[hydrating](https://medium.com/on-archivy/on-forgetting-e01a2b95272#.lrkof12q5)*) using the Twitter API. I highly recommend using [twarc](https://github.com/DocNow/twarc), a command line tool, and Python library to archive Twitter JSON data. Twarc is fast, reliable, and easy to use. If you are using Twarc for the first time, refer to [this tutorial](https://github.com/alblaine/twarc-tutorial). You just need to type one or two commands in the command line to download the Twitter data you want. The followings are examples.
-
 2. Either search for tweets or turn a tweet ID dataset into into tweets (called *[hydrating](https://medium.com/on-archivy/on-forgetting-e01a2b95272#.lrkof12q5)*) using the Twitter API. I highly recommend using [twarc](https://github.com/DocNow/twarc), a command line tool, and Python library to archive Twitter JSON data. Twarc is fast, reliable, and easy to use. If you are using Twarc for the first time, refer to [this tutorial](https://github.com/alblaine/twarc-tutorial). You just need to type one or two commands in the command line to download the Twitter data you want. The followings are examples.
+
 
 ```bash
 # search
@@ -98,7 +97,7 @@ df <- jsonl_to_df(filepath)
 
 ### 2. `jsonl_to_df_all()`: Turn all Tweet JSON files, saved in a directory, into a dataframe
 
-Again, the `df_all` object should have nine columns. If your JSON file is heavy (>10GB), I recommend running [`future::plan("multiprocess")`](https://cran.r-project.org/web/packages/future/vignettes/future-1-overview.html) before using this function to speed up the process. I tested the running time performance using the tictoc package. The `jsonl_to_df_all()` function takes 17,148 seconds, or **4.76 hours**, to turn **5,050,042** tweets into a data frame.
+Again, the `df_all` object should have nine columns. If your JSON file is heavy (>10GB), I recommend running [`future::plan("multiprocess")`](https://cran.r-project.org/web/packages/future/vignettes/future-1-overview.html) before using this function to speed up the process. I tested the running time performance using the tictoc package. If you use parallel processing, the `jsonl_to_df_all()` function takes 241.68 seconds, or **4 minutes**, to turn **1,927,000** tweets into a data frame.
 
 ```r
 
