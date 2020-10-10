@@ -1,4 +1,4 @@
-#' Identity US locations based on location variable
+#' Identity US locations based on location field
 #'
 #' @param df A parsed Tweet JSON file (data.frame) which includes location variable
 #'

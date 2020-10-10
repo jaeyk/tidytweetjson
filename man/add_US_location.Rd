@@ -2,7 +2,7 @@
 % Please edit documentation in R/add_US_location.R
 \name{add_US_location}
 \alias{add_US_location}
-\title{Identity US locations based on location variable}
+\title{Identity US locations based on location field}
 \usage{
 add_US_location(df)
 }
@@ -13,5 +13,5 @@ add_US_location(df)
 US_location column is added to the data.frame
 }
 \description{
-Identity US locations based on location variable
+Identity US locations based on location field
 }
