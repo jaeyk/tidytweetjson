@@ -1,8 +1,9 @@
 #' Parse a Tweet JSON file into a dataframe
 #'
 #' @param file_path A file path which indicates a Tweet JSON file. This input should be a string vector.
+#' @simplify Extracting only tweet IDs, texts, and time stamps. This argument should be either `FALSE` or `TRUE`. The default value is `FALSE`. 
 #'
-#' @return A dataframe with nine columns: "id", "country_code", "location", "created_at", "full_text", "retweet_count", "favorite_count", "user.followers_count", "user.friends_count"
+#' @return A dataframe with nine columns (if simplify = FALSE): "id", "country_code", "location", "created_at", "full_text", "retweet_count", "favorite_count", "user.followers_count", "user.friends_count." A dataframe with three columns (if simplify = TRUE): "id", "created_at", "full_text" 
 #' 
 #' @importFrom tidyjson read_json
 #' @importFrom magrittr "%>%"
@@ -17,7 +18,7 @@
 #' @importFrom dplyr full_join
 #' @export
 
-jsonl_to_df <- function(file_path){
+jsonl_to_df <- function(file_path, simplify = FALSE){
 
   # Save file name 
   
@@ -33,6 +34,8 @@ jsonl_to_df <- function(file_path){
 
 	listed <- read_json(file_path, format = c("jsonl"))
 
+	if (simplify == FALSE) {
+	  
 	# IDs of the Tweets with country codes
 
 	ccodes <- listed %>%
@@ -67,7 +70,27 @@ jsonl_to_df <- function(file_path){
 
   # full join
 	outcome <- full_join(ccodes, df) %>% full_join(locations)
-
+	
 	# output
 	outcome %>% select(-c("document.id"))
+	
+	return(outcome)
+	
+	}
+	
+	if (simplify == TRUE) {
+	  
+	  # Extract other key elements from the JSON file
+	  df <- listed %>%
+	    spread_values(
+	      id = jnumber("id"),
+	      created_at = jstring("created_at"),
+	      full_text = jstring("full_text")) %>%
+	    as_tibble
+	  
+	  message(paste("Parsing", file_name, "done."))
+	  
+	  return(df)
+	}
+
 }

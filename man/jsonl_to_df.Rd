@@ -4,13 +4,13 @@
 \alias{jsonl_to_df}
 \title{Parse a Tweet JSON file into a dataframe}
 \usage{
-jsonl_to_df(file_path)
+jsonl_to_df(file_path, simplify = FALSE)
 }
 \arguments{
 \item{file_path}{A file path which indicates a Tweet JSON file. This input should be a string vector.}
 }
 \value{
-A dataframe with nine columns: "id", "country_code", "location", "created_at", "full_text", "retweet_count", "favorite_count", "user.followers_count", "user.friends_count"
+A dataframe with nine columns (if simplify = FALSE): "id", "country_code", "location", "created_at", "full_text", "retweet_count", "favorite_count", "user.followers_count", "user.friends_count." A dataframe with three columns (if simplify = TRUE): "id", "created_at", "full_text"
 }
 \description{
 Parse a Tweet JSON file into a dataframe

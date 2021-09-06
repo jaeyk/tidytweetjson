@@ -2,7 +2,7 @@
 % Please edit documentation in R/add_date.R
 \name{add_date}
 \alias{add_date}
-\title{Parse created_at variable into a date variable}
+\title{Turn created_at field into a date variable}
 \usage{
 add_date(df)
 }
@@ -13,5 +13,5 @@ add_date(df)
 date column is added to the data.frame
 }
 \description{
-Parse created_at variable into a date variable
+Turn created_at field into a date variable
 }

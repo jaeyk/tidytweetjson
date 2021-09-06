@@ -4,7 +4,7 @@
 \alias{jsonl_to_df_all}
 \title{Parse multiple Tweet JSON files into a dataframe}
 \usage{
-jsonl_to_df_all(dir_path)
+jsonl_to_df_all(dir_path, simplify = FALSE)
 }
 \arguments{
 \item{dir_path}{A directory path where a user saved Tweet JSON files. This input should be a string vector.}
