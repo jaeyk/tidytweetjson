@@ -90,6 +90,8 @@ jsonl_to_df <- function(file_path, simplify = FALSE){
 	  
 	  message(paste("Parsing", file_name, "done."))
 	  
+	  df <- df %>% select(-c("document.id"))
+	  
 	  return(df)
 	}
 
